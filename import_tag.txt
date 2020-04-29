@@ -1,5 +1,0 @@
-ALBUM=title
-ARTIST=artist
-ALBUMARTIST=artist
-DATE=20xx
-GENRE=Pop
