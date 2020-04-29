@@ -3,9 +3,9 @@ metaflac\_edit
 
 It is for setting the meta tags of flac files.
 
-*requires:*
-- `metaflac` command
-	If you don't have the command, you can install it by `sudo apt install flac/bionic`.
+**requires:**  
+You need`metaflac` command.
+If you don't have the command, you can install it by `sudo apt install flac/bionic`.
 
 
 
