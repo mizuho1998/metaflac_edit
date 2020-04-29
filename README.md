@@ -1,3 +1,14 @@
+metaflac\_edit
+===
+
+It is for setting the meta tags of flac files.
+
+*requires:*
+- `metaflac` command
+	If you don't have the command, you can install it by `sudo apt install flac/bionic`.
+
+
+
 # Usage
 
 directory storucture:
@@ -19,6 +30,7 @@ MUSICS
 ```
 
 fimename: `00-00-music_name.flac` or `00 00 music_name.flac`
+
 
 ### Set meta tag
 
