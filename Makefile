@@ -4,9 +4,6 @@ IMPORT_TAG_FILE="import_tags.txt"
 TRACK=10
 
 
-chmod:
-	find ${ALBUM_DIR} -name "*.flac" -not -name ".*" -print | xargs -l -d '\n' chmod -- 777
-
 check:
 	ls "${ALBUM_DIR}" | while read file; do \
 		echo "$$file"; \
@@ -16,7 +13,7 @@ check:
 
 get-metatag:
 	metaflac --export-tags-to=export_tags.txt "${FILE}"
-	cat export_tags.txt >> "${IMPORT_TAG_FILE}"
+	# cat export_tags.txt >> "${IMPORT_TAG_FILE}"
 
 set-all-tag: set-common-tag set-title set-track
 
