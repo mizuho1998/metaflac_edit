@@ -4,7 +4,7 @@ IMPORT_TAG_FILE="import_tags.txt"
 TRACK=10
 
 convert-flac:
-	mkdir -p ${OUT_DIR}
+	mkdir -p "${OUT_DIR}"
 	flac --best --output-prefix="${OUT_DIR}/" "${ALBUM_DIR}/"*
 
 check:
