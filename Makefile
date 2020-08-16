@@ -3,6 +3,9 @@ FILE=""
 IMPORT_TAG_FILE="import_tags.txt"
 TRACK=10
 
+convert-flac:
+	mkdir -p ${OUT_DIR}
+	flac --best --output-prefix="${OUT_DIR}/" "${ALBUM_DIR}/"*
 
 check:
 	ls "${ALBUM_DIR}" | while read file; do \
@@ -13,7 +16,7 @@ check:
 
 get-metatag:
 	metaflac --export-tags-to=export_tags.txt "${FILE}"
-	# cat export_tags.txt >> "${IMPORT_TAG_FILE}"
+	cat export_tags.txt >> "${IMPORT_TAG_FILE}"
 
 set-all-tag: set-common-tag set-title set-track
 
