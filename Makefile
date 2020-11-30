@@ -1,11 +1,15 @@
 ALBUM_DIR=""
+OUT_DIR="./"
 FILE=""
 IMPORT_TAG_FILE="import_tags.txt"
 TRACK=10
 
+
 convert-flac:
-	mkdir -p "${OUT_DIR}"
-	flac --best --output-prefix="${OUT_DIR}/" "${ALBUM_DIR}/"*
+	$(eval album_name := $(shell echo "${ALBUM_DIR}" | sed -e "s/.*\/\(.*\)/\1/g"))
+	echo "\noutput dir: ${album_name}\n"
+	mkdir -p "${OUT_DIR}/${album_name}"
+	flac --best --output-prefix="${OUT_DIR}/${album_name}/" "${ALBUM_DIR}/"*
 
 check:
 	ls "${ALBUM_DIR}" | while read file; do \
